@@ -16,16 +16,15 @@ public abstract class Repositorio {
         ArrayList<Encomenda> Encomenda = new ArrayList<Encomenda>();
         ArrayList<EntradaNovoLivro> EntradaNovoLivro = new ArrayList<EntradaNovoLivro>();
         ArrayList<PropostaAquisicao> PropostaAquisicao = new ArrayList<PropostaAquisicao>();
-        ArrayList<Doacao> Doacao = new ArrayList<Doacao>();
         ArrayList<TipoUtilizador> TipoFuncionario = new ArrayList<TipoUtilizador>();
         ArrayList<Funcionario> Funcionario = new ArrayList<Funcionario>();
         ArrayList<Evento> Evento = new ArrayList<Evento>();
         ArrayList<TipoEvento> TipoEvento = new ArrayList<TipoEvento>();
-        ArrayList<NotificacaoEvento> NotificacaoEvento = new ArrayList<NotificacaoEvento>();
-        ArrayList<PedidoInscricaoEvento> PedidoInscricaoEvento = new ArrayList<PedidoInscricaoEvento>();
+        ArrayList<Equipamento> Equipamento = new ArrayList<Equipamento>();
+        ArrayList<TipoEquipamento> TipoEquipamento = new ArrayList<TipoEquipamento>();
+        ArrayList<Reserva> Reserva = new ArrayList<Reserva>();
+        ArrayList<TipoReserva> TipoReserva = new ArrayList<TipoReserva>();
 
-        public void adicionaNotificacaoEvento(NotificacaoEvento notificacaoEvento) {NotificacaoEvento.add(notificacaoEvento);}
-        public void adicionaPedidoInscricaoEvento(PedidoInscricaoEvento inscricaoEvento) {PedidoInscricaoEvento.add(inscricaoEvento);}
         public void adicionaTipoFuncionario(TipoUtilizador tipo_utilizador)
         {
             TipoFuncionario.add(tipo_utilizador);
@@ -33,10 +32,6 @@ public abstract class Repositorio {
         public void adicionaFuncionario(Funcionario funcionario)
         {
             Funcionario.add(funcionario);
-        }
-        public void adicionaDoacao(Doacao doacao)
-        {
-            Doacao.add(doacao);
         }
         public void adicionaEvento(Evento evento) { Evento.add(evento); }
         public void adicionaTipoEvento(TipoEvento tipoevento)
@@ -79,6 +74,10 @@ public abstract class Repositorio {
         {
             Coima.add(coima);
         }
+        public void adicionaEquipamento (Equipamento equipamento){ Equipamento.add(equipamento); }
+        public void adicionaTipoEquipamento (TipoEquipamento tipoequipamento) { TipoEquipamento.add(tipoequipamento); }
+        public void adicionaReserva (Reserva reserva) {Reserva.add(reserva); }
+        public void adicionaTipoReserva (TipoReserva tiporeserva) {TipoReserva.add(tiporeserva); }
         public Emprestimo devolveEmprestimoDaRequisicao(Requisicao r)
         {
             Iterator var2 = this.Emprestimo.iterator();
@@ -109,6 +108,7 @@ public abstract class Repositorio {
         public void adicionaPropostaRequisicao(PropostaAquisicao propostaAquisicao){
             PropostaAquisicao.add(propostaAquisicao);
         }
+
     }
 
 
